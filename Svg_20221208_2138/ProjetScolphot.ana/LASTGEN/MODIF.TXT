@@ -1,0 +1,10 @@
+//MO024-025.TXT ANA00024 TO ANA00025
+SCEnvoiFTP		TAR	185	nouvelle taille enregistrement : 185
+SCEnvoiFTP	Id	RUB+		Id est une nouvelle clé
+SCEnvoiFTP	SCini_fichiers_id	RUB+		SCini_fichiers_id est une nouvelle clé
+SCEnvoiFTP	IDLOCEnvoiFTP	RUB-		la clé IDLOCEnvoiFTP est supprimée
+SCEnvoiFTP	IDEnvoiLabo	RUB-		la clé IDEnvoiLabo est supprimée
+SCEnvoiLabo		FIC-	SCEnvoiLabo	Fichier supprimé SCEnvoiLabo
+Contrainte_SCini_fichiers_SCEnvoiFTP		NWL	SCini_fichiers (id) et SCEnvoiFTP (SCini_fichiers_id)	Nouvelle liaison entre les fichiers SCini_fichiers (id) et SCEnvoiFTP (SCini_fichiers_id)
+Contrainte_LOCEnvoiLabo_LOCEnvoiFTP		DEL	SCEnvoiLabo (IDEnvoiLabo) et SCEnvoiFTP (IDEnvoiLabo)	Liaison supprimée entre les fichiers SCEnvoiLabo (IDEnvoiLabo) et SCEnvoiFTP (IDEnvoiLabo)
+Contrainte_SCetablissements_anneesscolaires_SCEnvoiLabo		DEL	SCetablissement_anneesscolaire (id) et SCEnvoiLabo (etablissement_anneesscolaire_id)	Liaison supprimée entre les fichiers SCetablissement_anneesscolaire (id) et SCEnvoiLabo (etablissement_anneesscolaire_id)

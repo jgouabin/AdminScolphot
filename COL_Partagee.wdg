@@ -1,0 +1,203 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : COL_Partagee
+ major_version : 26
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x14623f34003c883b
+ internal_properties : BgAAAAYAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  type_code : 31
+  p_codes :
+   -
+     code : |1+
+      
+      // Chaine secret pour le calcul des clé d'activation 
+      //---------------------------------------------------
+      sChSecrete 		est une chaîne = "0CSDavid1FV2BI3OP4QA5ZN6TY7UEmmeline8RL9MWXGHJoelK"
+     type : 720896
+  procedures :
+   -
+     name : F_RetourneCleAcces
+     procedure_id : 1468805921051084859
+     type_code : 15
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] F_RetourneCleAcces (<psCleInitiale>)
+      //
+      // Paramètres :
+      //	psCleInitiale :<indiquez ici le rôle de sLicence>
+      // Valeur de retour :
+      // 	chaîne ANSI : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      fonction F_RetourneCleAcces(psCleInitiale):chaîne
+      
+      // Retourne la clé d'accès à  saisir par l'utilisateur pour débloquer l'application
+      //------------------------------------------------------------------------
+      
+      sCleRetour est une chaîne = CléCalculeCléActivation(psCleInitiale,sChSecrete)
+      
+      renvoyer sCleRetour
+      
+     type : 458752
+   -
+     name : F_Cryptage
+     procedure_id : 1545598317130753951
+     type_code : 15
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] F_Cryptage (<psMotdePasse> [, <psType>])
+      //
+      // Paramètres :
+      //	psMotdePasse :<indiquez ici le rôle de psMotdePasse>
+      //	psType (valeur par défaut="C") :< indiquez ici le rôle de psType >
+      // Valeur de retour :
+      // 	chaîne ANSI : // 	Aucune
+      //
+      
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE F_Cryptage(psMotdePasse,psType = "C")
+      //-------------------------------------------------------
+      // psType = "C" => la fonction retourne psMotdePasse crypté
+      // psType = "D" => la fonction retourne psMotdePasse Décrypté
+      //-------------------------------------------------------
+      
+      // Chaine Secrète De Cryptage Des Mots De Passe
+      sChainePWD 		est une chaîne =  "Scolphot-201503070130-UnClavierAzertyEnVautDeux-Emmeline,David,Joel-ChaineSecreteDeCryptageDesMotsDePasse.@007"
+      sChaineRetour 	est une chaîne = ""
+      
+      
+      SI psMotdePasse <> "" ALORS
+      	
+      	SELON psType 
+      		CAS "C"  // Crypte
+      			sChaineRetour = Crypte(psMotdePasse, sChainePWD,crypteSécurisé)
+      		CAS "D"  // DéCrypte
+      			SI psMotdePasse[[1 sur 2]] = "!!" ALORS	
+      				// Mot de passe en clair dans le fichier. A N UTILISER QUE SI IL Y A LE FEU A LA PLATEFORME
+      				sChaineRetour =  psMotdePasse[[2 A ]]
+      			SINON
+      				sChaineRetour = Décrypte(psMotdePasse,sChainePWD,crypteSécurisé)
+      			FIN
+      	FIN
+      FIN
+      
+      RENVOYER sChaineRetour
+     type : 458752
+   -
+     name : F_RetourneLicence
+     procedure_id : 1649542212436264769
+     type_code : 15
+     code : |1-
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] F_RetourneLicence (<psCleIinitiale>)
+      //
+      // Paramètres :
+      //	psCleIinitiale :<indiquez ici le rôle de psCleIinitiale>
+      // Valeur de retour :
+      // 	chaîne ANSI : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      fonction F_RetourneLicence(psCleIinitiale) :chaîne
+      
+      // La fonction retourne la licence contenue dans la clé initiale
+      //------------------------------------------------------------------
+      
+      sLicence est une chaîne = CléRécupèreIdentifiant(psCleIinitiale)
+      
+      renvoyer sLicence
+     type : 458752
+   -
+     name : F_compareCleInitialeEtActivation
+     procedure_id : 1649605180998499685
+     type_code : 15
+     code : |1-
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] F_compareCleInitialeEtActivation (<psCleIni>, <psCleActive>)
+      //
+      // Paramètres :
+      //	psCleIni :<indiquez ici le rôle de psCleIni>
+      //	psCleActive :<indiquez ici le rôle de pssCleActive>
+      // Valeur de retour :
+      // 	booléen : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE F_compareCleInitialeEtActivation(psCleIni ,psCleActive):booléen
+      
+      // Comparaison de la clé initiale et de la clé d'activation
+      //----------------------------------------------------------------
+      
+      sCleIni 		est une chaîne = psCleIni
+      sCleActive		est une chaîne = psCleActive
+      sSecrete		est une chaîne = sChSecrete
+      
+      bOk est un booléen = CléCompareClé(sCleIni,sCleActive,sSecrete)
+      
+      //trace("---------------------------------------------------------------------------")
+      //Trace(psCleIni+RC+psCleActive+RC+sChSecrete+rc+bOk)
+      //Trace("---------------------------------------------------------------------------")
+      
+      renvoyer bOk
+     type : 458752
+   -
+     name : F_CreeCleInitiale
+     procedure_id : 1649611563331349716
+     type_code : 15
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] F_CreeCleInitiale (<psLicence>)
+      //
+      // Paramètres :
+      // 	psLicence : <indiquez ici le rôle de psLicence>
+      // Valeur de retour :
+      // 	chaîne ANSI : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE F_CreeCleInitiale(psLicence):chaîne
+      
+      // Retourne la clé initiale
+      // A chaque appel, la clé est différente même si la licence est identique
+      
+      // En conséquence, pour un même disque dur et un même numéro de licence
+      // deux utilisateurs Windows auront une clé d’accès différente
+      //--------------------------------------------------------------
+      
+      sScleInitiale est une chaîne
+       
+      si psLicence <> "" alors 
+      	sScleInitiale = CléGénèreCléInitiale(psLicence)
+      fin
+      
+      renvoyer sScleInitiale
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BgAAAAYAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : COL_SansNom1
+resources :
+ string_res :
+  identifier : 0x14623e5400371ced
+  internal_properties : BgAAAAYAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BgAAAAYAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

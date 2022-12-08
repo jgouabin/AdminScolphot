@@ -1,0 +1,513 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : AdminScolphot
+ major_version : 26
+ minor_version : 0
+ type : 4097
+ description : ""
+ subtype : 0
+project :
+ identifier : 0x0
+ internal_properties : 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
+ configurations :
+  -
+    name : ScolphotAdmin32
+    internal_properties : BgAAAAYAAAC2bndyfbhzcUyucXDRq6llXqdWtT/JDRUpYOU5Y2spxZFZvVJLxlPMhJQRKcRvfFx/32igQZmY2zX4/BbnaUp7Ch/aWiu6FdUyPB53b0pVisUfdO8Zh42r02uH5ig3UKDA/MycDN+8sBxH7+FaNieKbuS703Ee1rFU2e1kQ643CRvC2+utgBtWy5TUPzjuU24sEE6VtMGLZeHEnOQ9/KTjlqoVoNwmBqYSvVXlGKc9b+tOcTVZCithxLKPg/R/BaraCI2EhUBJNLZRa8ReTYrTxwdWd9/dnR61yNYQewFd8UV/GMVHG9dz9ywq3s8YIqtKJQCgew1PnCLtCC9Ldn0pgA1BsWC0WYjUKghmEBUU9y8BzWgDGa6+gfBqK5RL9aW3Z1OVq6gQ30w+Dd+P/I36B+dCgqgkAmmk3KPiYY0U16yW+O+WFrJHLKgDmzmjEK9FW+BwA9VQaTpFnM0YjxkixLB/ei2f88IxKsAUIv/oXJkQ4wTqTQozSrnNLuEyIUG3WjWSDaYRk2L5G/Bo1W3aQKOG4HZEJsMukBJbxSa5l6u9qtU+5eh9KYX4wDpzyfTtcq4ItaxflwaY2jG1osxT9G+xD/pTjsOjShi2ywkD6cY9Ju/QApqQRmpP9SoWKlu8Ey4od3S2VyppLEapO4LEJgJ3kTkJ8RktggN6ojpXurLSavQZerCuD61y5EBf08Tal/wjH2LXByXs1VTsjrPewqtHRsdoHbgSvUo7eZELiibEs7wFkQwA8JnBuVMZqQFnHVmPzIUMhYL+6evXnR/Cyvu8G19oMsoXKXiW8R/eMUue39T4zWdxKh3rgrvdwAIPyoF2ymfiplFtwNnTw93CuEJE7WUaAINeXeSrnvRm779oM7dgNxVy7cHqlP8zXVH3sPhoe8QZ8iXJfdec0wyDe4Ve5lWG+t1/Urfi55JdMnzMQAy+4ADORlo3AEaruXnK4+6lI3aMMgAl7JzK/RjeShNyXcyYOK/qihFwdzzrcOvrfSlieVdFvML0fdjgnW9g3toxl2cUSYPWdHgn4hAlo+tASnFkPzL1RE0e1ujcuxOx06gfwnj5/8oib7CF4HHajzCh05kYpCQg+AEcz7mFb/AhFVuI6fx16IpGc1XZHgUclc528hCd4EJugVnkOScGPLAOAw4Jyf4J2RmWZ6DJN5WKoo2KninGGsO0oJU0K0qbC52+w1DlkZp75WrUObKhLC9wZeQBix/MCkc2O9Gqfz5/FP7kBCAWGQNnO5yfdjDoyQ0UqGNI/8vn1k8Xk4KUUdF3QaDSG5p+ePuVUbG1HUgHxZ1CXACy45JJXgryP7QtbEsduBjhQc2MeZa9OXWiSYcB3ltlXQn5TNp2nH1Glk26akBM+Fs13EmVTqJDyXOVSRqDKDXfD4/f5Iv8c9zEAylRqdfzBxiImUDPtppUvrFGVTsTcvH4PZ/V0fMbk0qmxe1JZqn1IDC1rJRQGVTPD5XOpux5gD/fgp+Vnbpf7ilJf3Qc4vJtXBcon8I0PpKg1WcOboStukp8PngcBArxtYRUUjLcI/TXfZ59C5BDEAsqKCiUpVpgKiZ60XGfGepb+p2STJ6lMn4lQB9h+xwt1vThIce7j3viIz2whEUlIwtRkqBRknXpwqcIpSr4lph6z6N4N44JekMbhvuox2/JinCZiU6BsXkvOqPLuMA=
+    configuration_id : 14175305410480953365
+    type : 1
+    generation_directory : .\Exe\ScolphotAdmin32
+    generation_name : ScolphotAdmin.exe
+    version :
+     major_version : 1
+     revision_version : 14
+     internal_generation_version : 23
+     autoincrement_version : false
+    icon_filename : .\administration.ico
+    language : 1
+  -
+    name : Windows 32-PREPROD
+    internal_properties : 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
+    configuration_id : 16176022050781844000
+    type : 1
+    generation_directory : .\Exe\Windows 32-PREPROD
+    generation_name : AdminScolphot.exe
+    version : {}
+    language : 1
+  -
+    name : Windows 32-PRODUCTION
+    internal_properties : BgAAAAYAAACOeq4bDqgzxq0DVl+tHunIPXrdG5re6L5pIoT8cNA6g7V2ZL6xcm4LoHhaqbFT+EbYIYWAePE7ixihJ/90ZIrVjAq89XYsgwxXWJJZmfZYrgc89EedKbIyUn7QJpKUwoVdZclFntqkMZKKIpDaX4UUbFV6Foy8xFm51xCS5u6QjdpsdxjmnxGedfK6sHa0oMwHtST6gh8pWOp0mEn6dJy3r12ztTVuxjA48ct41qeYBjK1sbL9GIOd/l0y2TWZyhsbDgkyeTJv3rkMFY1dtqBe46gQmeMoILstsJqnAbjnpkN7N1BU+jkGk3gNUUFMwEW3k7jTWK3GK5Dbsrjje5M6bMAZgAkHNgLv1ozdX4ofO3z5mpaeQiEN+6+jeL4m0NvV5t9ccVUbGsKBa5nDqjR1/Sc43SkJOqZlz5gM2u3Vdu5rE+wTia9YV+vMKmm9JYz9xXum8RHkZxceWHD1s3ra61itgF1+0d7XkAl1YsHQ983P36GcsxDcsYJThdqa3MKYQDIb2gNe6c0Pima8LRzLnzYmkdy6DQ==
+    configuration_id : 2378364740478674341
+    type : 1
+    generation_directory : .\Exe\Windows 32-PRODUCTION
+    generation_name : Windows 32-PRODUCTION.exe
+    version : {}
+    language : 1
+ elements :
+  identifier : 0x487b79b0003440f0
+  elements :
+   -
+     name : FEN_Principale
+     identifier : 0x487b7da2013cadab
+     internal_properties : BgAAAAYAAACvq4ebKFXdjl1cwhs/bQXdPVwEnCWUClyqgBhlKs5M9AwkiZSpUNL3+iCaZi6iXlK6ug==
+     physical_name : .\FEN_Principale.wdw
+     type : 2
+   -
+     name : ETAT_Relevé_Situation_Mois
+     identifier : 0x4882287d00194be1
+     internal_properties : BgAAAAYAAAB716PnxIGpsrFnF1gEQPExh6TSGsvZLJaOVyrNa6tjtUf56uEl0xoq3kS+Ovr2gnZe5g==
+     physical_name : .\ETAT_Relevé_Situation_Mois.wde
+     type : 3
+     configurations :
+      -
+        configuration_id : 14175305410480953365
+        excluded : true
+   -
+     name : REQ_ECHEANCEETABLISSEMENT_SELECT_RelevéStatistiques
+     identifier : 0x48822968001bdf49
+     internal_properties : BgAAAAYAAAApJRF1su/H6MutYn38yvFlP2g6qp8ekoy0kx3gyf0Z12XrWIeRd2H0lIp0TNQM9OQsNA==
+     physical_name : .\REQ_ECHEANCEETABLISSEMENT_SELECT_RelevéStatistiques.WDR
+     type : 5
+     configurations :
+      -
+        configuration_id : 14175305410480953365
+        excluded : true
+   -
+     name : REQ_ECHEANCEETABLISSEMENT_SELECT_Virement
+     identifier : 0x48822968001de1e9
+     internal_properties : BgAAAAYAAACsqoSQL1Tcj1wyJ7KxibLIui25qRzTvdyiJlq7bFo6tgLIHUTUNCQ5KR+ZZy+hWU+5uQ==
+     physical_name : .\REQ_ECHEANCEETABLISSEMENT_SELECT_Virement.WDR
+     type : 5
+     configurations :
+      -
+        configuration_id : 14175305410480953365
+        excluded : true
+   -
+     name : REQ_ECHEANCEETABLISSEMENT_SELECT_RelevéSituation
+     identifier : 0x488229c1001f3b7e
+     internal_properties : BgAAAAYAAAAwDmi0cyiAm7he0yft556vkpHZwXjvGUOKNL0RpvCkRMRu7N8/wdBlBTulE5NNNasVHQ==
+     physical_name : .\REQ_ECHEANCEETABLISSEMENT_SELECT_RelevéSituation.WDR
+     type : 5
+     configurations :
+      -
+        configuration_id : 14175305410480953365
+        excluded : true
+   -
+     name : ETATMOD_Contrat
+     identifier : 0x48822ae80021bb49
+     internal_properties : BgAAAAYAAADZtYGFIh8XGDvdU8meKu3tu+7KIhooaxWKWC5kvSZs/PDsAzjm2k7khLoknGScZFS8RA==
+     physical_name : .\ETATMOD_Contrat.wte
+     type : 21
+   -
+     name : ETATMOD_Etats
+     identifier : 0x48822ae80023bd9b
+     internal_properties : BgAAAAYAAAA3Ex8DoJ2VlqVb3VdkYiH5OQgAKJxccymKPHAapW6kFOQ8QXygYMheAjiiHuYa5toiIg==
+     physical_name : .\ETATMOD_Etats.wte
+     type : 21
+   -
+     name : REQ_Facture_CompteurMax
+     identifier : 0x488231b300254616
+     internal_properties : BgAAAAYAAAAS6EpebdpSDS7AKXt/z9NJHB1bk7Ne7j2O1zLgcjPZL8FxgTXj3UaTd60X4aFfG413/w==
+     physical_name : .\REQ_Facture_CompteurMax.WDR
+     type : 5
+     configurations :
+      -
+        configuration_id : 14175305410480953365
+        excluded : true
+   -
+     name : ETAT_Etablissement_Facture_EnvoisDomicile
+     identifier : 0x488231fb00275f46
+     internal_properties : BgAAAAYAAADZtYGFIh8XGDvd+vAclqPYT9hKmi9LMNe2WbrVGQ0Jh3W7bXK2AhnkhLoknGScZFS8RA==
+     physical_name : .\ETAT_Etablissement_Facture_EnvoisDomicile.wde
+     type : 3
+     configurations :
+      -
+        configuration_id : 14175305410480953365
+        excluded : true
+   -
+     name : ETAT_Facture_Photographe_A_Etablissement
+     identifier : 0x4882329c0029d47c
+     internal_properties : BgAAAAYAAADudMba6ZaeURIEXnytQc/tPrPNrRKtXau51OnMBw8N2xnV5+1L9fdHO+HbJe3jnxH7ew==
+     physical_name : .\ETAT_Facture_Photographe_A_Etablissement.wde
+     type : 3
+     configurations :
+      -
+        configuration_id : 14175305410480953365
+        excluded : true
+   -
+     name : REQ_FACTURE_SELECT_EnvoisDomicile
+     identifier : 0x488232f2002b24ca
+     internal_properties : BgAAAAYAAADSKAoerZqSTW4AasY5l/9TBkfdRfaiWm+KlAuH9YETPfcP+znh3wNTN+3XIeEf2803Pw==
+     physical_name : .\REQ_FACTURE_SELECT_EnvoisDomicile.WDR
+     type : 5
+     configurations :
+      -
+        configuration_id : 14175305410480953365
+        excluded : true
+   -
+     name : REQ_FACTURE_SELECT_PartPhotographe
+     identifier : 0x488232f3002d26fd
+     internal_properties : BgAAAAYAAACvq4ebKFXdjl1DnYp8zCAxf342vh3aGHerkUHdEpT+0mKSqY2dGzgG+iCaZi6iXlK6ug==
+     physical_name : .\REQ_FACTURE_SELECT_PartPhotographe.WDR
+     type : 5
+     configurations :
+      -
+        configuration_id : 14175305410480953365
+        excluded : true
+   -
+     name : REQ_FactureAbonnement
+     identifier : 0x488235640030aeee
+     internal_properties : BgAAAAYAAAAXc3+jAH01NoV7iJ+S/ZqgY3YC6lOA7Yet2gmPVj5UpFiUGAYr3Uf+4lhCvka6RroCAg==
+     physical_name : .\REQ_FactureAbonnement.WDR
+     type : 5
+     configurations :
+      -
+        configuration_id : 14175305410480953365
+        excluded : true
+   -
+     name : ETAT_FacturePhotographeHébergements
+     identifier : 0x48823c8600328ecb
+     internal_properties : BgAAAAYAAACb90NHZCGJklFHq3kMiTpFIbzYKJBYHDO5ox9oV7xWql6SewM4iB4K/iSeGppWIpZ+hg==
+     physical_name : .\ETAT_FacturePhotographeHébergements.wde
+     type : 3
+     configurations :
+      -
+        configuration_id : 14175305410480953365
+        excluded : true
+   -
+     name : ETAT_Relevé_Photographe_Mois
+     identifier : 0x48823c8700349236
+     internal_properties : BgAAAAYAAAD3U9/D4F3V1uWbvzbwpySaZcQ8pBOy/QhFBo8twHakrAT8dC4LNTIewnhiXibaphriYg==
+     physical_name : .\ETAT_Relevé_Photographe_Mois.wde
+     type : 3
+     configurations :
+      -
+        configuration_id : 14175305410480953365
+        excluded : true
+   -
+     name : REQ_ECHEANCEPHOTOGRAPHE_Relevé
+     identifier : 0x48823cc600368570
+     internal_properties : BgAAAAYAAADLRzPX1JGZQgH3G4k8XY1Cl/rWjsGo3biwOMXtNFK4eFygjvdIuA56btTOKurmkgbOVg==
+     physical_name : .\REQ_ECHEANCEPHOTOGRAPHE_Relevé.WDR
+     type : 5
+     configurations :
+      -
+        configuration_id : 14175305410480953365
+        excluded : true
+   -
+     name : REQ_Facture_Photographe
+     identifier : 0x48823cc600388909
+     internal_properties : BgAAAAYAAABi2FpOfSqCnb5QdOIlKJRuGE8Xv3V847et55fzY1LCfoaIoehfofVjBz2nEZFPK51n7w==
+     physical_name : .\REQ_Facture_Photographe.WDR
+     type : 5
+     configurations :
+      -
+        configuration_id : 14175305410480953365
+        excluded : true
+   -
+     name : REQ_FacturePhotographe
+     identifier : 0x48823cfb003a563d
+     internal_properties : BgAAAAYAAADzTyt/zLnxKgnvww70AYgpG1jWzvT0kCSuoz5HFI+HaasVCsxjpcayVsw2ggL++u7WXg==
+     physical_name : .\REQ_FacturePhotographe.WDR
+     type : 5
+     configurations :
+      -
+        configuration_id : 14175305410480953365
+        excluded : true
+   -
+     name : COL_Partagee
+     identifier : 0x48827d4701117d77
+     internal_properties : BgAAAAYAAADPSyd7yPW97v2jyCorPlllSRqUVO/5z+K28VktsVO7TaMZfPER8LfmmoB6Rs4C/vLaWg==
+     physical_name : .\COL_Partagee.wdg
+     type : 7
+   -
+     name : COL_PGlobales
+     identifier : 0x48827975010f9424
+     internal_properties : BgAAAAYAAACtqYWZJhMbxJeZ7uZJItY8tdbwIC/NVHGjZzhBvVs75QMZ6TvRaB0gwGZQqGiYYFC4uA==
+     physical_name : .\COL_PGlobales.wdg
+     type : 7
+   -
+     name : FEN_Initialisation
+     identifier : 0x488242ff0107d61b
+     internal_properties : BgAAAAYAAADZtYGFIh8XGDvdi7Bf0ATbBxASMgnPY7hOR6Ofw3Uhn22zqqxoWWbkhLoknGScZFS8RA==
+     physical_name : .\FEN_Initialisation.wdw
+     type : 2
+   -
+     name : FEN_DetailPH
+     identifier : 0x4883782902d6a113
+     internal_properties : BgAAAAYAAADPSyd7yPW97v2kLRaGjaFVhYbQAL/G3gyvdGrGKR/3OZ9t5D2qUFnfmoB6Rs4C/vLaWg==
+     physical_name : .\FEN_DetailPH.wdw
+     type : 2
+   -
+     name : WinDevMessageBox
+     identifier : 0x4883d9f10330ab7e
+     internal_properties : BgAAAAYAAACoppCMO2BIUxAH5flgaP4Xqh+pecAPwFtLySW0Tds51yWJNeZZop9GPePd21uVbWOttQ==
+     physical_name : .\WinDevMessageBox.WDW
+     type : 2
+   -
+     name : WinDevDialogBox
+     identifier : 0x4883da040338f50a
+     internal_properties : BgAAAAYAAABFwa3xTmtDXG8C8ceJ6VPmVRT8dN3MEgO32iGxdrJY6NjIPEnsH3VBOO7o0FCAeGhQ0A==
+     physical_name : .\WinDevDialogBox.WDW
+     type : 2
+   -
+     name : FEN_DetailETS
+     identifier : 0x488a724401233335
+     internal_properties : BgAAAAYAAAA9GRUJtuPL1OexR4GbWLuz7c6oCDfV1y6vmnw18QePcVdFzlXf2po40HZgWNgI8OAoKA==
+     physical_name : .\FEN_DetailETS.wdw
+     type : 2
+   -
+     name : COL_FTPAdmin
+     identifier : 0x49ec9f56006edbf9
+     internal_properties : BgAAAAYAAAAYdsDc65CYQw1yXXTLBEDo0lXhMQ9G9nJWHRSDy1422n6sKbLPaQ3yctPNK+vlnRP9BQ==
+     physical_name : .\COL_FTPAdmin.wdg
+     type : 7
+   -
+     name : FEN_ExtractionSociete
+     identifier : 0x49ecb915013d6cf7
+     internal_properties : BgAAAAYAAABcOrTg34Ssvwluky98W226wpXR8c+uvwGiBmlXZ9LCfoqQq0H/OrsOXs/JN//xiX9JyQ==
+     physical_name : .\FEN_ExtractionSociete.wdw
+     type : 2
+   -
+     name : FEN_Tableur
+     identifier : 0x49f398cc014570eb
+     internal_properties : BgAAAAYAAAAiGBoOverC3fsTmt6I/8cY6Pm3PxNxrS+On3Bvkpf902WdEt5mm9GvzH1nUdEP690nLw==
+     physical_name : .\FEN_Tableur.wdw
+     type : 2
+   -
+     name : FEN_EnregistreSous
+     identifier : 0x49f65466015b2478
+     internal_properties : BgAAAAYAAACqoJL2NXI6ZWOeNE5gZdVrgMFfR3s0yu6ug6yu1kNR/znJ01EFBDIqVPXvyUmHc2Wvtw==
+     physical_name : .\FEN_EnregistreSous.wdw
+     type : 2
+   -
+     name : FEN_mlajlicence
+     identifier : 0x49fb59d8013d0206
+     internal_properties : BgAAAAYAAABh3VlNeiePoKzQMCfrMoiGhfDsPAq464VK5KP2lWQ20j6iZpyuS10METKsFJxULJxk7A==
+     physical_name : .\FEN_mlajlicence.wdw
+     type : 2
+   -
+     name : FEN_razSociete
+     identifier : 0x4a1b0cbe01c569d6
+     internal_properties : BgAAAAYAAABRrYmdKlffkF3+a6HvvutusdKsvPVazOOzk4eM41fHAQ8dn9r4CZWj/iKcZCykXEy0vA==
+     physical_name : .\FEN_razSociete.wdw
+     type : 2
+   -
+     name : FEN_Parametres
+     identifier : 0x4a6ca69701e1b096
+     internal_properties : BgAAAAYAAAAFAW2xjiuDnKlL64zj7m5SiTRQMI9ttgR2idjWOsBSrlqGEi6gGc7o+i6oEJBAOKgQEA==
+     physical_name : .\FEN_Parametres.wdw
+     type : 2
+   -
+     name : FEN_FicheLicence
+     identifier : 0x4a747ebc02e70063
+     internal_properties : BgAAAAYAAABBPbnt2oevQA3npzUwQN5fZzRi+l9Fd7J2KY7t9yPrbe9xjHRgWlJkbtLMNPz0jHxEzA==
+     physical_name : .\FEN_FicheLicence.wdw
+     type : 2
+   -
+     name : FEN_FicheArticle
+     identifier : 0x4a9449ca022b06dc
+     internal_properties : BgAAAAYAAADGTC5yse7G6fT+bU59YXVdRnU9ZVCujJmImh00/gyAoKBCnmiyUGr/lYlzTdUL9+nTUw==
+     physical_name : .\FEN_FicheArticle.wdw
+     type : 2
+  other_elements :
+   -
+     physical_name : .\pdf-16.png
+   -
+     physical_name : .\ParamExtraction.xml
+  analysis : .\ProjetScolphot.ana\ProjetScolphot.wda
+  analysis_password : TEUMjPJRHqZiIIPye5qULlAQOe0HMP7ffrslpQ
+  net_assemblies : []
+  uwp_api : []
+  external_components : []
+  internal_components : []
+ report_and_queries_enabled : false
+ languages :
+  - fr-FR
+ wd_style_sheet : ".\\AdminScolphot.sty\r\n.\\Gabarits\\WD\\200 Gray Interactiv\\Gray Interactiv.sty"
+ code_elements :
+  type_code : 0
+  p_codes :
+   -
+     code : |1+
+      
+      gbConnecteBDDdistante 		est un booléen = faux
+      gcnxBDDPostgre 				est une connexion
+      
+      gUSER est compose de
+      	sRepDonnees 		est une chaine
+      	sRepFactures		est une chaine
+      	sRepParamExtract	est une chaîne
+      	sRepEnregExtract	est une chaine
+      	
+      FIN
+      
+      gRep est compose de //Répertoires
+      	sExe 				est une chaîne		// Application
+      	sDonnees 			est une chaîne		// Données fic
+      	sTemporaire			est une chaîne		// Données temporaire
+      	sHistoAptoriel		est une chaîne		// Historique Aptoriel
+      FIN
+      
+      gvcConfigurationFTP est composée de
+      	gsAdresseFTP	 		est une chaîne			// adresse du site FTP					Cnx.Adresse
+      	gsNomUtilisateur 		est une chaîne			// nom de l'utilisateur				Cnx.Utilisateur
+      	gsMDPUtilisateur 		est une chaîne			// mot de passe de l'utilisateur		Cnx.MDP
+      	gbAnonyme 				est un booléen			// connexion anonyme 					Cnx.Anonyme
+      	gnNumeroport	 		est un entier 			// numéro du port FTP du serveur		Cnx.Port
+      	gndelai 				est un entier 			// délai avant abandon					Cnx.Delai
+      	gnTypeConnexion 		est un booléen			// type de connexion au serveur 		Cnx.TypeConnexion (faux=active ou vrai=passive)
+      	gsProfil 				est une chaîne			// profil en cours
+      	gnTypeTransfert 		est un entier				// transfert 1= ASCII ou 2 = Binaire			Cnx.TypeTransfert
+      	gnSécuritéConnexion 	est un entier				// sécurité de la connexion				Cnx.Securite
+      	//	1= par défaut, 2= Protocole SFTP, 3= FTPS, 4 =FTPES 
+      	gbIgnorerErreur 		est un booléen			// vrai = ignorer les erreurs de certificat ?	Cnx.IgnoreErreur
+      FIN
+      
+      gvcConnexionFTP est composée de 
+      	nIDConnexion 		est un entier
+      	sHeureDebut		est une chaîne
+      	//	nIDTimer			est un entier
+      FIN
+      
+      gvcModeEnvoi est compose de
+      	sRepDestination est une chaîne	// Répertoire de destination FTP
+      	bSupprime est un booléen		// Supprime ou non les fichiers en local
+      	nRemplace est un entier		// Si le fichier existe sur FTP , ne rien faire =0, écraser = 1, renommer = 2, demander = 3
+      	//  En exécution de script la valeur 3 n'est pas acceptée   
+      FIN
+      
+      gvcModeReception est compose de
+      	sRepDestination est une chaîne	// Répertoire de destination en local
+      	bSupprime est un booléen		// Supprime ou non les fichiers sur le FTP 
+      	nRemplace est un entier		// Si le fichier existe en local , ne rien faire =0, écraser = 1, renommer = 2, demander = 3    
+      	//  En exécution de script la valeur 3 n'est pas acceptée
+      	sFichier		est une chaîne 	// utilisé uniquement pour la mise à jour de Scolphot
+      FIN
+      
+      // Initialement, il n'y a pas de connexion
+      gvcConnexionFTP.nIDConnexion = -1
+      
+      // Pour la gestion des différentes versions et base de données
+      //------------------------------------------------------------
+      
+      ETypeServeur est une enumeration
+      PREPROD = "185.98.128.105"
+      PRODUCTION = "plateforme.scolphot.com"	//"195.110.35.52"
+      FIN
+      
+      
+      gvcScolphot est compose de 
+      	eServeur est un ETypeServeur	// Serveur utilisé
+      	sSousRep est une chaîne 		// Sous répertoire de TADUGO\ pour l'exécutable et les données 
+      	sMotDePasse est une chaîne
+      FIN
+      
+      gtabSection est un tableau associatif (*, *, wlEntier, 8) de chaînes
+      gtabSection[0] = "Pas renseigné"
+      gtabSection[1] = "Ecole maternelle"
+      gtabSection[2] = "Ecole élémentaire"
+      gtabSection[3] = "Ecole primaire"
+      gtabSection[4] = "Collège"
+      gtabSection[5] = "Lycée"
+      gtabSection[6] = "Ecole secondaire"
+      gtabSection[7] = "Toutes les sections de l'établissement"
+      
+      STRelationCatalogue est une structure
+      	sLibelle est une chaîne
+      	dhCreate_at est une dateheure
+      	dhUpdate_at est une dateheure
+      FIN
+      gtabFamilles 	est un tableau associatif (*, *, wlEntier) de STRelationCatalogue
+      gtabFormats 	est un tableau associatif (*, *, wlEntier) de STRelationCatalogue
+      gtabTypes 		est un tableau associatif (*, *, wlEntier) de STRelationCatalogue
+      
+      
+      
+      gbTrace 					est un booléen = faux	// Mise en place de fichier trace
+      gbModeMaintenace 			est un booléen = faux 	// logiciel en mode de maintenance pour le dev et et testeur
+      
+      gsFicinit 					est une chaîne = ComplèteRep(frepexe())+"AdminScolphot.ini"		// Fichier de ligne de commande qui contient le profil et / ou pas les transferts    
+      gsFicRapport 				est une chaîne		// Fichier de rapport
+      gsFicTrace 					est une chaîne         // Fichier trace
+      
+      gcnxBaseDistante			est une connexion
+      gcnxBaseLocale 				est une connexion
+      
+      HSurErreur("*",hErrPerteConnexion,P_ReconnecteBDD)
+      
+      BulleCouleur(ibCouleurDeTransparence, RVB(225, 224, 224))
+      
+     type : 196608
+   -
+     code : |1+
+      SI gbConnecteBDDdistante ALORS
+      	HFermeConnexion(gcnxBDDPostgre)
+      FIN
+      
+     type : 196610
+   -
+     type : 196621
+   -
+     type : 196627
+     enabled : false
+ code_parameters :
+  internal_properties : BgAAAAYAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+rad :
+ internal_properties : BgAAAAYAAABhIL0UXeZmxDJxY3Xy0Q==
+project_explorer :
+ explorer_type : project
+ children :
+  -
+    explorer_type : queries
+    children :
+     -
+       name : AncienneBase
+       explorer_type : custom_folder
+       children :
+        -
+          name : REQ_ECHEANCEETABLISSEMENT_SELECT_RelevéSituation
+          explorer_type : element
+          type : 5
+        -
+          name : REQ_ECHEANCEETABLISSEMENT_SELECT_RelevéStatistiques
+          explorer_type : element
+          type : 5
+        -
+          name : REQ_ECHEANCEETABLISSEMENT_SELECT_Virement
+          explorer_type : element
+          type : 5
+        -
+          name : REQ_ECHEANCEPHOTOGRAPHE_Relevé
+          explorer_type : element
+          type : 5
+        -
+          name : REQ_Facture_CompteurMax
+          explorer_type : element
+          type : 5
+        -
+          name : REQ_Facture_Photographe
+          explorer_type : element
+          type : 5
+        -
+          name : REQ_FACTURE_SELECT_EnvoisDomicile
+          explorer_type : element
+          type : 5
+        -
+          name : REQ_FACTURE_SELECT_PartPhotographe
+          explorer_type : element
+          type : 5
+        -
+          name : REQ_FactureAbonnement
+          explorer_type : element
+          type : 5
+        -
+          name : REQ_FacturePhotographe
+          explorer_type : element
+          type : 5
+resources :
+ string_res :
+  identifier : 0x0
+  internal_properties : BgAAAAYAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BgAAAAYAAAAd98VSJfHHqE3P0QHwrwdhn7ig8dWBR6valpUTgnAMTVXiDg==

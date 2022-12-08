@@ -1,0 +1,450 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : COL_PGlobales
+ major_version : 26
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x18827971011183f8
+ internal_properties : BgAAAAYAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  type_code : 31
+  p_codes : []
+  procedures :
+   -
+     name : _F_ConnexionServeurWeb
+     internal_properties : BgAAAAYAAAAeQeZWqR4YD9gNuw5ISpse4q5d4YfQh8vxSSLWonylqfGpzXAstIQfjtu5yNZJ9N/c91UXiZv53fcJCNn0zKQH2jXtD1BPimLproJX87E+1RbRiyhFUUvyPW0p6P5mipLcRRthNLb+/G4cHMU2fOcWaLmnLrlIMic+6HTcyeP/rQgO
+     procedure_id : 1766107611743309032
+     type_code : 15
+     code : |1-
+      // Traitement automatique des exceptions :   exécuter le bloc de code CAS EXCEPTION:
+      //
+      // Résumé : <indiquez ici ce que fait la procédure>
+      //// Syntaxe :
+      //_F_ConnexionServeurWeb ( [<pAffichebMessage>])
+      ////
+      //// Paramètres :
+      //	pAffichebMessage (valeur par défaut=1) :< indiquez ici le rôle de pAffichebMessage >
+      // Valeur de retour :
+      // 	Aucune
+      ////
+      //// Exemple :
+      //// Indiquez ici un exemple d'utilisation.
+      ////
+      //// 	bTimer (valeur par défaut=0) : < indiquez ici le rôle de bTimer >// Traitement automatique des exceptions :   exécuter le bloc de code CAS EXCEPTION:
+      ////
+      //
+      PROCEDURE _F_ConnexionServeurWeb(pAffichebMessage = vrai)
+      //
+      //sTemp est une chaîne
+      ////Message("Connexion à la plate forme Scolphot")
+      //
+      //gbConnecteBDDdistante = faux
+      //
+      //SI PAS g_InternetConnecte() ALORS
+      //	//"Aucune connexion internet ne semble active."+RC+"Vérifiez les connexions internet du poste"+RC+"puis relancez le traitement"
+      //	Erreur("Aucune connexion internet ne semble active."+RC+"Vérifiez les connexions internet du poste"+RC+"puis relancez le traitement")
+      //	message()
+      //	renvoyer faux
+      //FIN
+      //
+      //
+      //// Connexion en administrateur pour avoir les droits de lecture sur tous les fichiers
+      //// Ou créer utilisateur spécifique ?
+      ////-----------------------------------------
+      //
+      //// Valeur par défaut
+      ////----------------------
+      //gcnxBaseDistante..Provider = hAccèsHFClientServeur
+      //
+      //gcnxBaseDistante..Serveur = gvcScolphot.eServeur..Valeur
+      //
+      //gcnxBaseDistante..Utilisateur = "admin"
+      //gcnxBaseDistante..MotDePasse = gvcScolphot.sMotDePasse
+      //gcnxBaseDistante..BaseDeDonnées = "Scolphot"
+      //gcnxBaseDistante..Accès = hOLectureEcriture	//3
+      //gcnxBaseDistante..Cryptage =  hCryptageRC5_16	//33
+      //
+      //si fFichierExiste(gsFicinit) ALORS
+      //	
+      //	// Valeur renseignée dans le fichier Scolphot.ini
+      //	//---------------------------------------------------
+      //		
+      //	sTemp  = INILit("CONNEXION_BDD","bdd.provider","",gsFicinit)
+      //	SI SansEspace(sTemp) <> "" ALORS gcnxBaseDistante..Provider = sTemp
+      //	
+      //	
+      //	sTemp  = INILit("CONNEXION_BDD","bdd.Serveur","",gsFicinit)
+      //	SI SansEspace(sTemp) <> "" ALORS gcnxBaseDistante..Serveur = sTemp
+      //	
+      //	sTemp = INILit("CONNEXION_BDD","bdd.utilisateur","",gsficinit)
+      //	si SansEspace(sTemp) <> "" ALORS
+      //		gcnxBaseDistante..Utilisateur = COL_Partagee.F_Cryptage(INILit("CONNEXION_BDD","bdd.utilisateur","",gsFicinit),"D")
+      //	FIN
+      //
+      //	sTemp = INILit("CONNEXION_BDD","bdd.mdp","",gsFicinit)
+      //	SI SansEspace(sTemp) <> "" ALORS
+      //		gcnxBaseDistante..MotDePasse = COL_Partagee.F_Cryptage(INILit("CONNEXION_BDD","bdd.mdp","",gsFicinit),"D")
+      //	FIN
+      //	
+      //	sTemp  = INILit("CONNEXION_BDD","bdd.base","",gsFicinit)
+      //	si SansEspace(sTemp) <> "" alors gcnxBaseDistante..BaseDeDonnées = sTemp
+      //	
+      //	sTemp = INILit("CONNEXION_BDD","bdd.acces","",gsFicinit)
+      //	SI SansEspace(sTemp) <> "" ALORS gcnxBaseDistante..Accès = val(sTemp)
+      //	
+      //	sTemp = INILit("CONNEXION_BDD","bdd.cryptage","",gsFicinit)
+      //	SI SansEspace(sTemp) <> "" ALORS gcnxBaseDistante..Cryptage = val(sTemp)
+      //	
+      //	
+      //FIN
+      //
+      //si gbtrace ALORS
+      //	trace("cnxServeurWeb..Serveur",gcnxBaseDistante..Serveur+tab+gcnxBaseDistante..basededonnees)
+      //FIN
+      //// Ouverture de la connexion
+      //SI PAS HOuvreConnexion(gcnxBaseDistante) ALORS
+      //	si pAffichebMessage alors
+      //		Erreur(ChaîneConstruit("Impossible de se connecter au serveur"+RC+"------------------------------------------------"+RC+HErreurInfo())) //Impossible de se connecter au serveur
+      //	fin
+      //
+      //	RENVOYER Faux
+      //FIN
+      //
+      //
+      //si pas HChangeConnexion("*",gcnxBaseDistante) alors
+      //	SI pAffichebMessage ALORS
+      //		Erreur(ChaîneConstruit("Impossible de se connecter au serveur"+RC+"------------------------------------------------"+RC+HErreurInfo())) //Impossible de se connecter au serveur
+      //	fin
+      //	RENVOYER Faux
+      //sinon
+      //	HPasse("*","IXOJOEL")
+      //FIN
+      //
+      //gbConnecteBDDdistante = vrai
+      //
+      //
+      //
+      //// POUR FORNCER LA CREATION DES FCIHIERS EN MODE TEST
+      ////----------------------------------------------
+      ////SI PAS HCréationSiInexistant("*") ALORS
+      ////	Erreur(HErreurInfo())
+      ////	RENVOYER Faux
+      ////FIN
+      //
+      ////HModifieStructure(Etablissement_AnneeScolaire,hmsNormal)
+      //
+      //renvoyer vrai
+      //CAS EXCEPTION:
+      //	gbCnxDistante = faux
+      //	si gbTrace alors trace(ExceptionInfo())
+      //	Erreur(ChaîneConstruit("Impossible de se connecter au serveur"+RC+"------------------------------------------------",ExceptionInfo())) //Impossible de se connecter au serveur
+      //	renvoyer faux
+     type : 458752
+   -
+     name : g_InternetConnecte
+     procedure_id : 1766107843671596891
+     type_code : 15
+     code : |1-
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] g_InternetConnecte ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	booléen : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE g_InternetConnecte()
+      
+      typeconnect est un entier système
+      
+      si appeldll32( "Wininet","InternetGetConnectedState" , &typeconnect , 0 ) alors
+      	renvoyer  vrai
+      fin 
+      
+      renvoyer faux
+     type : 458752
+   -
+     name : g_Erreur
+     procedure_id : 1855536823771862443
+     type_code : 15
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //g_Erreur (<psLibTrace> [, <psMessage> [, <pbAfficheEcran>]])
+      //
+      // Paramètres :
+      //	psLibTrace :<indiquez ici le rôle de sLibTrace>
+      //	psMessage (valeur par défaut="") :<indiquez ici le rôle de Param2>
+      // 	pbAfficheEcran (valeur par défaut=1) : < indiquez ici le rôle de pbAfficheEcran >
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE g_Erreur(psLibTrace,psMessage = "",pbAfficheEcran = vrai )
+      
+      // Gestion de l'affichage et de l'enregistrement des erreurs
+      //----------------------------------------------------------
+      
+      sMessage est une chaîne = psMessage
+      //ErreurInfo(errLigne)
+      
+      SI sMessage = "" ALORS
+      	psLibTrace += " - "+ErreurInfo(errLigne)
+      	sMessage = ErreurInfo()
+      FIN
+      SI sMessage = "" ALORS
+      	psLibTrace += " - "+ExceptionInfo(errLigne)
+      	sMessage = ExceptionInfo()
+      FIN
+      
+      // Fenêtre de trace ou fichier trace si il existe
+      //---------------------------------------------
+      SI gbTrace ALORS Trace(psLibTrace+RC+sMessage)
+      
+      // Affiche ou non à l'écran
+      //---------------------------------------------
+      SI pbAfficheEcran ALORS Erreur(psLibTrace+RC+sMessage)
+      
+      
+     type : 458752
+   -
+     name : F_ConnexionBDDdistante
+     internal_properties : BgAAAAYAAAAeQeZWqR4YD9gNuw5ISpse4q5d4YfQh8vxSSLWonylqfGpzXAstIQfjtu5yNZJ9N/c91UXiZv53fcJCNn0zKQH2jXtD1BPimLproJX87E+1RbRiyhFUUvyPW0p6P5mipLcRRthNLb+/G4cHMU2fOcWaLmnLrlIMic+6HTcyeP/rQgO
+     procedure_id : 1855544344269607197
+     type_code : 15
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] F_ConnexionBDDdistante ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	booléen : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //// Traitement automatique des exceptions :   exécuter le bloc de code CAS EXCEPTION:
+      //
+      
+      PROCEDURE F_ConnexionBDDdistante()
+      
+      sTemp est une chaîne
+      sLibTrace est une chaîne = "Connexion à la base de données"
+      
+      SI gbConnecteBDDdistante ALORS
+      	HFermeConnexion(gcnxBDDPostgre)
+      	gbConnecteBDDdistante = Faux
+      FIN
+      
+      si gvcConnexionFTP.nIDConnexion <> -1 ALORS
+      	FTPDéconnecte(gvcConnexionFTP.nIDConnexion)
+      	gvcConnexionFTP.nIDConnexion = - 1
+      FIN
+      
+      Message(" Connexion à la base de données")
+      
+      SI PAS g_InternetConnecte() ALORS
+      	//"Aucune connexion internet ne semble active."+RC+"Vérifiez les connexions internet du poste"+RC+"puis relancez le traitement"
+      	g_Erreur(sLibTrace,"Aucune connexion internet ne semble active."+RC+"Vérifiez les connexions internet du poste"+RC+"puis relancez le traitement")
+      	
+      	Message()
+      	RENVOYER Faux
+      FIN
+      
+      
+      //// Connexion en administrateur pour avoir les droits de lecture sur tous les fichiers
+      //// Ou créer utilisateur spécifique ?
+      ////-----------------------------------------
+      //
+      //// Valeur par défaut
+      ////----------------------
+      //gcnxBDDPostgre..Provider = hAccèsNatifPostgreSQL
+      //gcnxBDDPostgre..Accès = hOLectureEcriture	//3
+      //gcnxBDDPostgre..Serveur = gvcScolphot.eServeur..Valeur
+      //
+      //
+      //SELON gvcScolphot.eServeur..Nom	//gcnxBDDPostgre..Serveur
+      //	CAS PRODUCTION..Nom
+      ////		gcnxBDDPostgre..Serveur = gvcScolphot.eServeur..Valeur	// "195.110.35.52"	//gvcScolphot.eServeur..Valeur
+      //		gcnxBDDPostgre..Utilisateur = "plateforme"
+      //		gcnxBDDPostgre..MotDePasse = "TaduPla42"
+      //		gcnxBDDPostgre..BaseDeDonnées = "scolphot"
+      //		
+      //		// Variable ftp
+      //		//----------------------
+      //		gvcConfigurationFTP.gsAdresseFTP 			= gvcScolphot.eServeur..Valeur	//"195.110.35.52"
+      //		gvcConfigurationFTP.gsNomUtilisateur 		= "scolphotfact"
+      //		gvcConfigurationFTP.gsMDPUtilisateur 		= "zYnJ7zsfbm"
+      //		
+      //		gvcConfigurationFTP.gnSécuritéConnexion 	= 4			// ftpes
+      //		gvcConfigurationFTP.gnTypeConnexion 		= ftpModePassif 
+      //		
+      //		gvcModeReception.sFichier 					= ""
+      //
+      //		gvcConfigurationFTP.gnTypeTransfert 		= ftpModeBinaire	//	binaire
+      //		
+      //		gvcConfigurationFTP.gbIgnorerErreur	 		= 1
+      //		gvcConfigurationFTP.gnNumeroport 			= 21	
+      //		gvcConfigurationFTP.gbAnonyme 				= Faux			
+      //		gvcModeReception.sRepDestination 			= gUSER.sRepTemp
+      //		
+      //		gvcModeReception.bSupprime 					= Faux
+      //		gvcModeReception.nRemplace 					= 1
+      //		
+      //		
+      //	CAS PREPROD..Nom
+      ////		gcnxBDDPostgre..Serveur =  "185.98.128.105"	//gvcScolphot.eServeur..Valeur
+      //		gcnxBDDPostgre..Utilisateur = "preprod"
+      //		gcnxBDDPostgre..MotDePasse = "TaduScol42"
+      //		gcnxBDDPostgre..BaseDeDonnées = "scolphot_preprod"
+      //		
+      //		// Variable ftp
+      //		//----------------------
+      //		// PAS DE CONNEXION FTP
+      //	AUTRE CAS
+      //		Erreur(gvcScolphot.eServeur..Nom,"Pas de connexion")
+      //		RENVOYER Faux	
+      //FIN
+      
+      
+      //gsFicinit = "F:\temp\Scolphot1.ini"
+      SI fFichierExiste(gsFicinit) ALORS
+      	
+      	// Valeur renseignée dans le fichier Scolphot.ini
+      	//---------------------------------------------------
+      	
+      	sTemp  = INILit("CONNEXION_BDD","bdd.provider","",gsFicinit)
+      	SI SansEspace(sTemp) <> "" ALORS gcnxBDDPostgre..Provider = sTemp
+      	
+      	
+      	sTemp  = INILit("CONNEXION_BDD","bdd.Serveur","",gsFicinit)
+      	SI SansEspace(sTemp) <> "" ALORS gcnxBDDPostgre..Serveur = sTemp
+      	
+      	sTemp = INILit("CONNEXION_BDD","bdd.utilisateur","",gsFicinit)
+      	SI SansEspace(sTemp) <> "" ALORS
+      		gcnxBDDPostgre..Utilisateur = COL_Partagee.F_Cryptage(INILit("CONNEXION_BDD","bdd.utilisateur","",gsFicinit),"D")
+      	FIN
+      	
+      	sTemp = INILit("CONNEXION_BDD","bdd.mdp","",gsFicinit)
+      	SI SansEspace(sTemp) <> "" ALORS
+      		gcnxBDDPostgre..MotDePasse = COL_Partagee.F_Cryptage(INILit("CONNEXION_BDD","bdd.mdp","",gsFicinit),"D")
+      	FIN
+      	
+      	sTemp  = INILit("CONNEXION_BDD","bdd.base","",gsFicinit)
+      	SI SansEspace(sTemp) <> "" ALORS gcnxBDDPostgre..BaseDeDonnées = sTemp
+      	
+      	sTemp = INILit("CONNEXION_BDD","bdd.acces","",gsFicinit)
+      	SI SansEspace(sTemp) <> "" ALORS gcnxBDDPostgre..Accès = Val(sTemp)
+      	
+      	//	sTemp = INILit("CONNEXION_BDD","bdd.cryptage","",gsFicinit)
+      	//	SI SansEspace(sTemp) <> "" ALORS gcnxBDDPostgre..Cryptage = val(sTemp)
+      	
+      	
+      FIN
+      
+      SI gbTrace ALORS
+      	Trace("cnxServeurWeb..Serveur",gcnxBDDPostgre..Serveur+TAB+gcnxBDDPostgre..BaseDeDonnées)
+      FIN
+      // Ouverture de la connexion
+      SI PAS HOuvreConnexion(gcnxBDDPostgre) ALORS
+      	g_Erreur(sLibTrace,"Impossible de se connecter au serveur"+rc+HErreurInfo(),vrai) //Impossible de se connecter au serveur+
+      	RENVOYER Faux
+      FIN
+      
+      
+      SI PAS HChangeConnexion(FIC_DISTANT,gcnxBDDPostgre) ALORS
+      	g_Erreur(sLibTrace,"Impossible de se connecter au serveur"+rc+HErreurInfo()) //Impossible de se connecter au serveur
+      	RENVOYER Faux
+      FIN
+      
+      gbConnecteBDDdistante = Vrai
+      
+      
+      RENVOYER Vrai
+      
+      CAS EXCEPTION:
+      	g_Erreur(sLibTrace,"Impossible de se connecter au serveur"+RC+ExceptionInfo()) //Impossible de se connecter au serveur
+      	RENVOYER Faux
+      
+     type : 458752
+   -
+     name : P_ReconnecteBDD
+     procedure_id : 1862576837804123073
+     type_code : 15
+     code : |1-
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] P_ReconnecteBDD ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	entier : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE P_ReconnecteBDD()
+      
+      // Tentative de reconnexion à la base de données
+      //--------------------------------------------
+      
+      gbConnecteBDDdistante = Faux
+      //HFermeConnexion(gcnxBDDPostgre)
+      //
+      //Ouvre(FEN_Initialisation)
+      
+      //SI gbConnecteBDDdistante ALORS
+      //	RENVOYER  opRéessayer
+      //SINON
+      //	Erreur(MessTraduit("", 1)) //ScolphotAdmin est déconnecté de la base de donnée.
+      //	RelanceProgramme()
+      //FIN
+      
+      Message("Reconnexion à la base de donnée")
+      si HReconnecte() ALORS
+      	Temporisation(100)
+      	message()
+      	gbConnecteBDDdistante = Vrai
+      	RENVOYER  opRéessayer
+      sinon
+      	
+      	erreur(MessTraduit("", 1)) //ScolphotAdmin est déconnecté de la base de donnée.
+      	RelanceProgramme()
+      FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BgAAAAYAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : COL_SansNom1
+resources :
+ string_res :
+  identifier : 0x18827961010f4643
+  internal_properties : BgAAAAYAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+  strings :
+   -
+     text :
+      fr-FR : "ScolphotAdmin est déconnecté de la base de donnée.\r\n\r\nLa reconnexion automatique a échoué.\r\nLe programme va se relancer."
+     index : 0
+   -
+     text :
+      fr-FR : La connexion n'a pas été établie.
+     index : 1
+   -
+     text :
+      fr-FR : Vous devez spécifier l'adresse du serveur FTP.
+     index : 2
+custom_note :
+ internal_properties : BgAAAAYAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

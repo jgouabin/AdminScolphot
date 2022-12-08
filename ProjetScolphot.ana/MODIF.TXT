@@ -1,0 +1,5 @@
+//MO036-037.TXT ANA00036 TO ANA00037
+articlesformat_pochette		NFI		nouveau fichier
+articlesformat_pochette_articlesformat_id_foreign		NWL	articlesformats (id) et articlesformat_pochette (articlesformat_id)	Nouvelle liaison entre les fichiers articlesformats (id) et articlesformat_pochette (articlesformat_id)
+articlesformat_pochette_articlestypes_id_foreign		NWL	articlestypes (id) et articlesformat_pochette (articlestypes_id)	Nouvelle liaison entre les fichiers articlestypes (id) et articlesformat_pochette (articlestypes_id)
+articlesformat_pochette_articlesfamilles_id_foreign		NWL	articlesfamilles (id) et articlesformat_pochette (articlesfamilles_id)	Nouvelle liaison entre les fichiers articlesfamilles (id) et articlesformat_pochette (articlesfamilles_id)

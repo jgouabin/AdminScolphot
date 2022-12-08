@@ -1,0 +1,2 @@
+//MO693-694.TXT ANA00693 TO ANA00694
+EnvoiLabo	bTraitementINI	NNR	EstFichieINIRécupéré	ATTENTION : la rubrique EstFichieINIRécupéré a pour nouveau nom bTraitementINI

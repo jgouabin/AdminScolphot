@@ -1,0 +1,200 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_Initialisation
+ major_version : 26
+ minor_version : 0
+ type : 2
+ description : Fenetre d'initialisation du projet
+ subtype : 0
+window :
+ name : FEN_Initialisation
+ identifier : 0x288242e302686a90
+ internal_properties : BgAAAAYAAACocblw8wIW3rAjtV2CHCJtBJJXGkKCaSDm4lwDAe8Qytjx8Qo8r3MyGyFhbIMtWRF4K+xefSCKMRyIU3hZaj11HG1m89YTJ9TE+khwB0a4XsicXvbyE8jkwyN0sfxjFgUqxrHfJjOwE1x3Cluwbs6+B9Scvk3h1AsBtVeHPp4x1qQiU0rIPgnIiMBJzXZOuHZ0wiAyJspAWa9bpd/UaNJAKXEsjs1fQ9n1nQaKN++yGVvyTpB9aBEUW6JeHvdV0yunlD5dFsF19nLn7t1Rr35y2vOD6WNJDZfpT4jw2USf/6YNwHzpAeMtf3FA/E5O5Pufq8BEX63FI5qXaqwcz11A7Gb/d5NctiY3CQ4hOxH+HTOQAvsoDNKsLV1YEPM3N3e0iFJjBOpqkmAhpt/6URGdofF1qy9C9nS1RPaVa8jLQwqIm/l6AH207faQyHAPP0dECDgLH5qUcQrhzE8l+MLCgo6OLFBTc2ad1232+4nHHYtFZX4E4Kly/vfD7f7We3mEOwUSTtebkKWg/AnZIfgIBE/08F9eRXxFoPTrov8XJ6z3CFT/poycTdDLILZ/WJSXBK4LUMa7rksiJlZXMFCPUT+FOuN+JKGhBRp5REBlVkWlvmF+T43nLSrTJUxUFp/28LiOqWrp1V8GjIKY8NZ5EXynXjnzKaP+CqG0SFYcBIy2xpWCG/zBRqHz4Uv2hfIhK5XJ1OcvLFZnUT7VPnuKxHoW19QQwhji2lBgyxzSHXHsmpH9JKHaMKun
+ controls :
+  -
+    name : LIB_initialisation
+    identifier : 0x2882436502aa65b4
+    internal_properties : BgAAAAYAAABQZujKZ6L8ETaSa4Z3qoxsZGeIV0yqvB8cAfs28C9kRPNMuOO5ucZwbR0IYg9Riq7v67BvN6GkKLGUBQUZlhTnobtqbSJfIhK06kW8YJQfvzGCRL5DHYJEFxgW2pPzOtX8VXktrOOiFdZiCcEXI/zFiY5ozPVanE4CqaHJhsOXUk6DuSypEMO3Wnpk/5YlkMOGS4VSAT/RtzbWuO7SrMGZsXQdGqBDgE+9yh+BvOaP0HPuk9hcabQVznfK8EXTZSji+LJYnRlkyMmPsJyfyWJpgfqCK2J63XlhHJMgW5Ppi4nCDUfR8FGkhk3nsMrUeogUgDLfHEUXuzYkAl147sQfVs6RGK2aV528jGB3pZixA6ZVm10k/+TfkLtCl6lF8ooi0E+/68g/2vrbyqG5ikecAG6J52auOqlwWCPoKSKqGGVHkE0Arhb2BXcSM89keE3M
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes : []
+ menu :
+  name : _Menu
+  identifier : 0x292573e513b5f221
+  internal_properties : BgAAAAYAAABd4biPtdLQOwfUFiqrit8H4xfGqKyz9t6VLxCUnNZRQiLPVs82PZNE+UVdKRzjizyeuKyRur85gNMUfqplpmtNDnQWQla9zo+GH9+1EfUJ6w17Dn/egD/gv+Hhywk8c9unIdzEp7EHgaAqD28w7Agveg4u19PBcKGZtQ==
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : BgAAAAYAAAA67fgqjL+BlNW0l7RVb9QHekfVEUcR8SpB62EFBVueAPYoi1/j/aXUAO/gLLyCTVuQazFai314Ui0SG0rWW0oZm0BFICoRFAhcTeX8
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1+
+      PROCEDURE MaFenêtre()
+      
+   -
+     code : |1-
+      sdSource		est une source de données
+      sTxtReq			est une chaîne
+      stTemp 			est un STRelationCatalogue
+      Sablier(vrai)
+      
+      SI fFichierExiste(gsFicinit) ALORS
+      	gsFicTrace = INILit("GLOBAL","Trace","",gsFicinit)
+      	gbModeMaintenace = (Val(INILit("GLOBAL","maintenance","",gsFicinit)= 1))
+      	
+      	SI gsFicTrace <> "" ALORS
+      		//		si fFichierExiste(gsFicTrace) alors fSupprime(gsFicTrace,frVersCorbeille)
+      		gbTrace = Vrai
+      		SI gsFicTrace <> "1" ALORS
+      			gsFicTrace= fExtraitChemin(gsFicTrace,fDisque+fFichier+fRépertoire)+"_"+DateSys()+"_"+HeureSys()[[1 sur 6]]+fExtraitChemin(gsFicTrace,fExtension)
+      			TraceDébut(trFichier,gsFicTrace)
+      		FIN
+      		Trace(" Le "+DateVersChaîne(DateSys()) +" "+HeureVersChaîne(HeureSys())+RC) 
+      		Trace("------------  Infos système -------------")
+      		Trace(TAB+"Processeur "+TAB+TAB+SysVersionWindows(sysProcesseur))
+      		Trace(TAB+"Version     "+TAB+TAB+SysVersionWindows(sysVersionInfo))
+      		Trace(TAB+"Version cpl  "+TAB+TAB+SysVersionWindows(sysVersionCompil))
+      		Trace(TAB+"N° version "+TAB+TAB+SysVersionWindows(sysVersionNuméro))
+      		Trace(TAB+"Plateforme "+TAB+TAB+SysVersionWindows(sysVersionPlateForme))
+      		Trace(TAB+"Résolution "+TAB+TAB+SysRésolutionEcran)
+      		Trace(TAB+"Carte graphique "+TAB+TAB+SysListeCarteGraphique())
+      		Trace("--------------------------------------"+RC)
+      	FIN
+      FIN
+      
+      gRep.sTemporaire = ComplèteRep(fRépertoireTemp())+"AdminScolphot"
+      
+      SI PAS fRépertoireExiste(gRep.sTemporaire) ALORS
+      	SI PAS fRepCrée(gRep.sTemporaire) ALORS
+      		Erreur(ErreurInfo())
+      		Ferme("",Faux)
+      	FIN
+      FIN
+      
+      // Valeur qu'il est impératif de connaître avant de  continuer
+      //----------------------------------------------------------
+      //grep.sDonnees 	= COL_SpecifiqueWindows.g_RetourneParametre(HF_REPDONNEE) 
+      
+      //SI gUSER.sRepDonnees <> "" ALORS
+      //	SI PAS F_ControleFichiersLocaux() ALORS
+      //		P_MajStructure()
+      //	FIN
+      //FIN
+      
+      LIB_initialisation = "connexion au serveur "+gvcScolphot.eServeur..Nom
+      ///COL_PGlobales.F_ConnexionServeurWeb()
+      
+      si COL_PGlobales.F_ConnexionBDDdistante() alors
+      
+      //---------------------------------------------------------------
+      	
+      	sTxtReq = [
+      		SELECT Id, libelle, created_at, updated_at FROM %1 <§cs:6§>
+      	]
+      	
+      	// Remplissage des relations si besoin
+      //	SI gtabFamilles..Vide ALORS
+      		LIB_initialisation = "Chargement des familles d'articles"
+      		
+      		SI PAS HExécuteRequêteSQL(sdSource,hRequêteDéfaut,ChaîneConstruit(sTxtReq,articlesfamilles..Nom)) ALORS
+      			Sablier(Faux)
+      			Erreur(ErreurInfo())
+      			ferme()
+      		FIN
+      		POUR TOUT sdSource
+      			stTemp.sLibelle = sdSource.libelle
+      			stTemp.dhCreate_at = sdSource.created_at
+      			stTemp.dhUpdate_at = sdSource.updated_at
+      			
+      			gtabFamilles[sdSource.id] = stTemp
+      		FIN
+      //	FIN
+      	
+      //	SI gtabFormats..Vide ALORS
+      		LIB_initialisation = "Chargement des formats d'articles"
+      		
+      		SI PAS HExécuteRequêteSQL(sdSource,hRequêteDéfaut,ChaîneConstruit(sTxtReq,articlesformats..Nom)) ALORS
+      			Sablier(Faux)
+      			Erreur(ErreurInfo())
+      			ferme()
+      		FIN
+      		POUR TOUT sdSource 
+      			stTemp.sLibelle = sdSource.libelle
+      			stTemp.dhCreate_at = sdSource.created_at
+      			stTemp.dhUpdate_at = sdSource.updated_at
+      			
+      			gtabFormats[sdSource.id] = stTemp
+      		FIN
+      //	FIN
+      
+      //	SI gtabTypes..Vide ALORS
+      		LIB_initialisation = "Chargement des types d'articles"
+      		
+      		SI PAS HExécuteRequêteSQL(sdSource,hRequêteDéfaut,ChaîneConstruit(sTxtReq,articlestypes..Nom)) ALORS
+      			Sablier(Faux)
+      			Erreur(ErreurInfo())
+      			Ferme()
+      		FIN
+      		POUR TOUT sdSource 
+      			stTemp.sLibelle = sdSource.libelle
+      			stTemp.dhCreate_at = sdSource.created_at
+      			stTemp.dhUpdate_at = sdSource.updated_at
+      			
+      			gtabTypes[sdSource.id] = stTemp
+      		FIN
+      //	FIN
+      	
+      	HLibèreRequête(sdSource)
+      FIN
+      Sablier(faux)
+      //---------------------------------------------------------------
+      
+      ferme()
+     type : 34
+   -
+     code : |1+
+      
+      
+     type : 234
+   -
+     code : |1+
+      
+      
+     type : 165
+   -
+     code : |1+
+      
+      
+     type : 177
+   -
+     code : |1+
+      
+      
+     type : 180
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1+
+      
+      
+     type : 2
+   -
+     type : 66049
+ code_parameters :
+  internal_properties : BgAAAAYAAAAwjDLmDSZ0H1P68nJIeNfqR9EvRjU/K+sVcM1T6rhVNr+VTV1mZ/rmoweYbFDZUhBGcv8UsxlDxVCOnb2U/SQOvlGWzNby3/w/V+ppSymxv+Vh
+  original_name : Modele1
+resources :
+ string_res :
+  identifier : 0x188242b000e1a22f
+  internal_properties : BgAAAAYAAAAa2Zm8J9E/zh+/WIrVvz1fER/So3PB0gjQuxc1xKQVWY4ZDm5lfg==
+custom_note :
+ internal_properties : BgAAAAYAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BgAAAAYAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe
